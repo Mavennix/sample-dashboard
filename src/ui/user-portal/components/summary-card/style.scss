@@ -1,0 +1,54 @@
+.summary-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .value, .title{
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .trend{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .trend-icon{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          
+        }
+        &.green{
+            .trend-icon{
+            background-color: #e9f8f5;
+            img{
+                filter: invert(68%) sepia(48%) saturate(594%) hue-rotate(100deg) brightness(92%) contrast(81%);
+            }
+            }
+        }
+        &.amber{
+            .trend-icon{
+            background-color: #fff8ee;
+            img{
+                filter: invert(74%) sepia(65%) saturate(3097%) hue-rotate(359deg) brightness(98%) contrast(104%);
+            }
+            }
+        }
+        &.red{
+            .trend-icon{
+            background-color: #fef3f0;
+            img{
+                filter: invert(71%) sepia(85%) saturate(6040%) hue-rotate(342deg) brightness(103%) contrast(101%);
+            }
+            }
+        }
+    }
+}
+
+.pie-chart-container{
+    height: 100px;
+    width: 100px;
+}

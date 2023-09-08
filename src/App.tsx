@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import AdminDashboard from './ui/admin-portal/dashboard';
+import UserLogin from './ui/user-portal/auth/login';
+import UserSignUp from './ui/user-portal/auth/signup';
+import UserDashboard from './ui/user-portal/dashboard';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement } from "chart.js";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement,);
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <UserSignUp />,
+  },
+  {
+    path: "/login",
+    element: <UserLogin />,
+  },
+
+  {
+    path: "/user-dashboard",
+    element: <UserDashboard />,
+  },
+  {
+    path: "/admin-dashboard",
+    element: <AdminDashboard />,
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

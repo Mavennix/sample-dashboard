@@ -1,0 +1,68 @@
+.m-0 {
+    margin: 0;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.096) 0px 8px 24px;
+    background-color: white;
+
+    .heading {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.chip {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &.primary {
+        small {
+            color: #387dff;
+        }
+
+        background-color: #d8e4ff;
+    }
+
+    &.success {
+        small {
+            color: #5ad59d;
+        }
+
+        background-color: #d6f5e6;
+    }
+}
+
+button {
+    background-color: #387dff;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: white;
+    margin: 20px 0;
+    cursor: pointer;
+    &:disabled {
+        background-color: #abc2ee;
+    }
+}
+
+.auth-layout {
+    display: flex;
+
+    .card {
+        margin: 100px auto;
+        min-width: 30%;
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px #eee solid;
+        margin: 10px 0;
+        width: 100%;
+    }
+}

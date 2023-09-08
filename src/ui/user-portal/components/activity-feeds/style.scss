@@ -1,0 +1,23 @@
+.activity-tile {
+    display: flex;
+    padding: 15px 0;
+    margin: 5px 0;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    .activity-details{
+        display: flex;
+        align-items: center;
+        img {
+            object-fit: contain;
+            margin-right: 10px;
+            height: 30px;
+            width: 30px;
+        }
+    
+        h5,
+        p {
+            margin: 0;
+        }
+    }
+}

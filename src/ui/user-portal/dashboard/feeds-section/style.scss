@@ -1,0 +1,12 @@
+.feeds-section{
+ display: flex;
+ gap: 30px;
+
+ .activity-feeds-section{
+    width: 60%;
+ }
+
+ .message-section{
+    width: 40%;
+ }
+}
